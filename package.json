@@ -5,9 +5,11 @@
   "main": "",
   "scripts": {
     "start": "webpack-dev-server --config=webpack/webpack.config.dev.js --progress",
-    "build": "webpack --config=webpack/webpack.config.prod.js --progress"
+    "build": "webpack --config=webpack/webpack.config.prod.js --progress --optimize-minimize"
   },
-  "keywords": ["webpack"],
+  "keywords": [
+    "webpack", "react"
+  ],
   "author": "ReySun <reysun_sky@outlook.com>",
   "license": "MIT",
   "devDependencies": {
@@ -24,9 +26,14 @@
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
     "node-sass": "^4.7.2",
+    "react-dev-utils": "^5.0.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.1",
     "webpack": "^3.10.0",
     "webpack-merge": "^4.1.1"
+  },
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   }
 }
