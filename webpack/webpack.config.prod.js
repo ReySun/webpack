@@ -7,7 +7,6 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require("clean-webpack-plugin");
-// const MinifyPlugin = require("babel-minify-webpack-plugin");
 
 const production = {
     plugins: [
@@ -35,7 +34,6 @@ const production = {
                 minifyURLs: true,
             },
         }),
-        // new MinifyPlugin(),
         new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false,

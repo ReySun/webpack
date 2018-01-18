@@ -3,20 +3,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = [
     {
-        enforce: "pre",
-        test: /\.(js|jsx|mjs)$/,
-        exclude: /node_modules/,
-        loader: "eslint-loader"
-    },
-    {
-        test: /\.(js|jsx|mjs)?$/,
-        exclude: /(node_modules)/,
-        loader: 'babel-loader?cacheDirectory=true',
-        query: {
-            presets: ['react', 'es2015']
-        }
-    },
-    {
         test: /\.(tsx|ts)$/,
         enforce: 'pre',
         loader: 'tslint-loader',
