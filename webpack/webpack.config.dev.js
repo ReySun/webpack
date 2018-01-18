@@ -1,6 +1,8 @@
 const paths = require('./paths');
 var baseConfig = require('./webpack.config');
 
+/* webpack plugins */
+const webpack = require('webpack');
 const merge = require('webpack-merge');
 
 const development = {
@@ -18,6 +20,10 @@ const development = {
             warnings: true,
             errors: true
         },
-    }
+    },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NamedModulesPlugin()
+    ]
 };
 module.exports = merge(baseConfig, development);

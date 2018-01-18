@@ -4,6 +4,7 @@ document.write('<h1>Hello World</h1>');
 if (__DEV__) {
   document.write(new Date());
 }
+// console.log(process.env.NODE_ENV);
 // 样式测试
 import './assets/css/css.css';
 import './assets/sass/sass.scss';
