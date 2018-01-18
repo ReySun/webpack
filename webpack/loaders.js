@@ -17,6 +17,16 @@ module.exports = [
         }
     },
     {
+        test: /\.(tsx|ts)$/,
+        enforce: 'pre',
+        loader: 'tslint-loader',
+        options: { /* Loader options go here */ }
+    },
+    { 
+        test: /\.(tsx|ts)?$/,
+        loader: "ts-loader"
+    },
+    {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
             fallback: 'style-loader',

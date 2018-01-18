@@ -1,23 +1,19 @@
 console.log(2);
 document.write('<h1>Hello World</h1>');
 
-if (__DEV__) {
-  document.write(new Date());
-}
-// console.log(process.env.NODE_ENV);
 // 样式测试
 import './assets/css/css.css';
 import './assets/sass/sass.scss';
 import './assets/less/less.less';
 
-import React, { Fragment } from 'react';
-import ReactDOM from 'react-dom';
-console.log(ReactDOM);
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+
 function App(){
   return (
-    <Fragment>
-      Hello, world!
-    </Fragment>
+    <>
+        Hello, world!
+    </>
   )
 }
 ReactDOM.render(<App />,document.getElementById('root'))
