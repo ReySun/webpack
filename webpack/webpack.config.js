@@ -7,6 +7,7 @@ const loaders = require('./loaders');
 /* webpack plugins */
 const HtmlwebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require("clean-webpack-plugin");
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -41,6 +42,7 @@ module.exports = {
               )
             }
           }),
+          new ExtractTextPlugin('style.css')
     ],
     module: {
 		loaders

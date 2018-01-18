@@ -29,7 +29,6 @@ const production = {
                 minifyURLs: true,
             },
         }),
-        new webpack.optimize.ModuleConcatenationPlugin(),
         new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false,
