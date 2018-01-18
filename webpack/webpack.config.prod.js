@@ -49,7 +49,8 @@ const production = {
                 ascii_only: true,
             },
             sourceMap: false,
-        })
+        }),
+        new webpack.NoEmitOnErrorsPlugin()
     ]
 };
 module.exports = merge(baseConfig, production);

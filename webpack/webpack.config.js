@@ -12,10 +12,10 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
     entry: {
         main: paths.appIndexJs,
-        vendor: ['react', 'react-dom']
+        vendor: ['react', 'react-dom', 'redux', 'react-redux']
     },
     resolve:{
-        extensions: ['.mjs', '.js', '.json', '.jsx', '.jsx']
+        extensions: ['.mjs', '.js', '.json', '.jsx', '.ts', '.tsx']
     },
     output: {
 		filename: '[name].bundle.js',
@@ -27,7 +27,7 @@ module.exports = {
             template: paths.appHtml
         }),
         new webpack.DefinePlugin({
-            __DEV__: JSON.stringify(false)
+            __DEV__: JSON.stringify(true)
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',

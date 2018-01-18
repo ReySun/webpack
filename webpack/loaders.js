@@ -5,15 +5,18 @@ module.exports = [
     {
         test: /\.(tsx|ts)$/,
         enforce: 'pre',
+        include: paths.appSrc,
         loader: 'tslint-loader',
         options: { /* Loader options go here */ }
     },
     { 
         test: /\.(tsx|ts)?$/,
+        include: paths.appSrc,
         loader: "ts-loader"
     },
     {
         test: /\.css$/,
+        include: paths.appSrc,
         use: ExtractTextPlugin.extract({
             fallback: 'style-loader',
             use: 'css-loader'
@@ -21,6 +24,7 @@ module.exports = [
     },
     {
         test: /\.less$/,
+        include: paths.appSrc,
         use: ExtractTextPlugin.extract({
             fallback: 'style-loader',
             use: ['css-loader', 'less-loader']
@@ -28,6 +32,7 @@ module.exports = [
     }, 
     {
         test: /\.scss$/,
+        include: paths.appSrc,
         use: ExtractTextPlugin.extract({
             fallback: 'style-loader',
             use: ['css-loader', 'sass-loader']
@@ -35,6 +40,7 @@ module.exports = [
     },
     {
       test: /\.(png|gif|jpg)/,
+      include: paths.appSrc,
       exclude: /(node_modules)/,
       loader: "file-loader?limit=10000&mimetype=image/png"
     }
