@@ -15,7 +15,7 @@ module.exports = {
         vendor: ['react', 'react-dom', 'redux', 'react-redux']
     },
     resolve:{
-        extensions: ['.mjs', '.js', '.json', '.jsx', '.ts', '.tsx']
+        extensions: ['.css', '.less', '.scss', '.mjs', '.js', '.json', '.jsx', '.ts', '.tsx']
     },
     output: {
 		filename: '[name].bundle.js',

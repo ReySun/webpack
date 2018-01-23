@@ -13,3 +13,11 @@ export function Haha(){ // tree-shaking test unused function
         </>
     )
 }
+export function RouteLink({ match  }){
+    console.log(match.params);
+    return (
+        <>
+            ID: {match.params.id}
+        </>
+    )
+}
