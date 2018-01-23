@@ -5,7 +5,7 @@ import {
     SET_VISIBILITY_FILTER,
     VisibilityFilters,
     Action
-} from '../actions';
+} from '../actions/index';
 const { SHOW_ALL } = VisibilityFilters;
 
 function visibilityFilter(state = SHOW_ALL, action: Action): string {

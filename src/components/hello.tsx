@@ -6,3 +6,10 @@ export function Hello(){
         </>
     )
 }
+export function Haha(){ // tree-shaking test unused function
+    return (
+        <>
+            Haha????
+        </>
+    )
+}

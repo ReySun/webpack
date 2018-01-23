@@ -7,7 +7,6 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require("clean-webpack-plugin");
-// const MinifyPlugin = require("babel-minify-webpack-plugin");
 
 const production = {
     plugins: [
@@ -35,7 +34,6 @@ const production = {
                 minifyURLs: true,
             },
         }),
-        // new MinifyPlugin(),
         new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false,
@@ -50,7 +48,7 @@ const production = {
             },
             sourceMap: false,
         }),
-        new webpack.NoEmitOnErrorsPlugin()
+        // new webpack.NoEmitOnErrorsPlugin(), // tree-shaking的时候redux的store报错：Unexpected token: name (store) from UglifyJs。仅仅在打包阶段报错，不影响实际使用
     ]
 };
 module.exports = merge(baseConfig, production);

@@ -14,7 +14,7 @@ import * as ReactDOM from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-import { store } from './redux/store'
+import { store } from './redux/store/index'
 import { Hello } from './components/hello'
 
 function App() {

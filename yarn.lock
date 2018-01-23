@@ -54,11 +54,9 @@
   dependencies:
     redux "^3.6.0"
 
-"@types/redux@^3.6.0":
-  version "3.6.0"
-  resolved "http://registry.npm.taobao.org/@types/redux/download/@types/redux-3.6.0.tgz#f1ebe1e5411518072e4fdfca5c76e16e74c1399a"
-  dependencies:
-    redux "*"
+"@types/redux@^3.6.31":
+  version "3.6.31"
+  resolved "http://registry.npm.taobao.org/@types/redux/download/@types/redux-3.6.31.tgz#40eafa7575db36b912ce0059b85de98c205b0708"
 
 abbrev@1:
   version "1.1.1"
@@ -3111,12 +3109,19 @@ redux-logger@^3.0.6:
   dependencies:
     deep-diff "^0.3.5"
 
-redux@*, redux@^3.6.0, redux@^3.7.2:
+redux@^3.6.0:
   version "3.7.2"
   resolved "http://registry.npm.taobao.org/redux/download/redux-3.7.2.tgz#06b73123215901d25d065be342eb026bc1c8537b"
   dependencies:
     lodash "^4.2.1"
     lodash-es "^4.2.1"
+    loose-envify "^1.1.0"
+    symbol-observable "^1.0.3"
+
+redux@^4.0.0-beta.1:
+  version "4.0.0-beta.1"
+  resolved "http://registry.npm.taobao.org/redux/download/redux-4.0.0-beta.1.tgz#fc1cf2fc33d23a1a201d00235b3e27a331261ec7"
+  dependencies:
     loose-envify "^1.1.0"
     symbol-observable "^1.0.3"
 
