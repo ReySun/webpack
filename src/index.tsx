@@ -12,15 +12,15 @@ if(module.hot){
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { HashRouter } from 'react-router-dom'
+import { HashRouter as Router,  } from 'react-router-dom'
 
 import { store } from './redux/store/index'
 import Todos from './components/Todos_app'
 
 ReactDOM.render(
     <Provider store={store}>
-        <HashRouter>
+        <Router>
             <Todos />
-        </HashRouter>
+        </Router>
     </Provider>,
     document.getElementById('root'))
