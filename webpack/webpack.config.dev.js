@@ -7,6 +7,9 @@ const merge = require('webpack-merge');
 
 const development = {
     target: 'web',
+    output: {
+        publicPath: '/',
+    },
     devServer: {
         contentBase: paths.appBuild,
         host: 'localhost',
@@ -20,6 +23,7 @@ const development = {
             warnings: true,
             errors: true
         },
+        historyApiFallback: true
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
