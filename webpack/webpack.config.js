@@ -26,9 +26,6 @@ module.exports = {
             title: 'Webpack-demo',
             template: paths.appHtml
         }),
-        new webpack.DefinePlugin({
-            __DEV__: JSON.stringify(true)
-        }),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
             minChunks: function (module,    ) {

@@ -26,6 +26,9 @@ const development = {
         historyApiFallback: true
     },
     plugins: [
+        new webpack.DefinePlugin({
+            __DEV__: JSON.stringify(true)
+        }),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NamedModulesPlugin()
     ]

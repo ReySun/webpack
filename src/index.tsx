@@ -3,7 +3,7 @@
 // import './assets/sass/sass.scss';
 // import './assets/less/less.less';
 if (__DEV__) {
-    console.log(__DEV__);
+    console.log(__DEV__,'----');
 }
 if(module.hot){
     console.log('module.hot');

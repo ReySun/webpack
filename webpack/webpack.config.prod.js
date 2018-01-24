@@ -7,11 +7,15 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require("clean-webpack-plugin");
-
+const BabiliPlugin = require("babili-webpack-plugin");
+const MinifyPlugin = require("babel-minify-webpack-plugin");
 const production = {
     plugins: [
         new CleanWebpackPlugin(paths.appBuild, {
             root: path.resolve(__dirname, '../'),
+        }),
+        new webpack.DefinePlugin({
+            __DEV__: JSON.stringify(false)
         }),
         new webpack.DefinePlugin({
             'process.env': {
@@ -34,21 +38,9 @@ const production = {
                 minifyURLs: true,
             },
         }),
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false,
-                comparisons: false,
-            },
-            mangle: {
-                safari10: true,
-            },
-            output: {
-                comments: false,
-                ascii_only: true,
-            },
-            sourceMap: false,
-        }),
-        // new webpack.NoEmitOnErrorsPlugin(), // tree-shaking的时候redux的store报错：Unexpected token: name (store) from UglifyJs。仅仅在打包阶段报错，不影响实际使用
+        new MinifyPlugin(),
+        new BabiliPlugin(),
+        new webpack.NoEmitOnErrorsPlugin()
     ]
 };
 module.exports = merge(baseConfig, production);
