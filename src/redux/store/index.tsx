@@ -2,9 +2,6 @@ import { createStore, compose, applyMiddleware } from 'redux';
 import todoApp from '../reducers/index';
 
 let composed = null;
-// declare var window: { //chrome redux extention
-//     __REDUX_DEVTOOLS_EXTENSION__: any
-// };
 if(__DEV__){
     const DevTools = require('../redux-devtools/index').default;
     const createLogger = require('./createLogger').default
