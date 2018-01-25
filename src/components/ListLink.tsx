@@ -18,11 +18,11 @@ export default class ListLink extends React.Component<any>{
     }
     render(){
         this.todo=this.props.todo;
-        return (!this.todo?null:
+        return (
             <li className={this.todo.completed === true ? 'completed':''}>
-                <div onClick={this.onToggleTodo.bind(this, this.todo.id)} className='view'>
-                    <input onClick={this.onToggleTodo.bind(this, this.todo.id)} className='toggle' onChange={this.onToggleTodo.bind(this, this.todo.id)} checked={this.todo.completed} type="checkbox"/>
-                    <label >{this.todo.text}</label>
+                <div className='view'>
+                    <input className='toggle' onChange={this.onToggleTodo.bind(this, this.todo.id)} checked={this.todo.completed} type="checkbox"/>
+                    <label onClick={this.onToggleTodo.bind(this, this.todo.id)} >{this.todo.text}</label>
                 </div>
                 <button onClick={this.onRemoveTodo.bind(this, this.todo.id)} className='destroy'></button>
             </li>
