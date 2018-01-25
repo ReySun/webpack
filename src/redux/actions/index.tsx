@@ -1,42 +1,31 @@
-
-export interface Action{
-    type: string;
-    text?: string;
-    index?: number
-    filter?: string;
-}
-export interface VisibilityFilter{
-    filter: string
-}
-export interface State{
-    filter: string;
-    todos: [Todo];
-}
-export interface Todo{
-    name: string;
-    completed: boolean;
-}
-
-/* action type */
-export const ADD_TODO = 'ADD_TODO';
-export const TOGGLE_TODO = 'TOGGLE_TODO'
-export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER'
-
-export const VisibilityFilters = {
-    SHOW_ALL: 'SHOW_ALL',
-    SHOW_COMPLETED: 'SHOW_COMPLETED',
-    SHOW_ACTIVE: 'SHOW_ACTIVE'
-}
+import { initPreState } from '../../constants/initPreState';
+import { Action } from '../../constants/interface';
+import { ADD_TODO, REMOVE_TODO, TOGGLE_TODO, SET_VISIBILITY_FILTER } from '../../constants/ActionType';
 
 /* action creator */
+let todosLen = initPreState.todos.length || 0;
 export function addTodo(text: string): Action {
-    return { type: ADD_TODO, text }
-}
-  
+    return {
+        id: todosLen++,
+        type: ADD_TODO,
+        text
+    }
+};
+export function removeTodo(index: number) {
+    return {
+        type: REMOVE_TODO,
+        index
+    };
+};
 export function toggleTodo(index: number): Action {
-    return { type: TOGGLE_TODO, index }
-}
-  
+    return {
+        type: TOGGLE_TODO,
+        index
+    }
+};
 export function setVisibilityFilter(filter: string): Action {
-    return { type: SET_VISIBILITY_FILTER, filter }
-}
+    return {
+        type: SET_VISIBILITY_FILTER,
+        filter
+    }
+};

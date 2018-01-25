@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
-import { TodoLists } from './TodoLists'
 
 export function Footer (){
     return (
@@ -17,4 +16,4 @@ export function Footer (){
             </ul>
         </div>
     )
-}
+};

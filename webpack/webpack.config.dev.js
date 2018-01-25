@@ -6,7 +6,7 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 
 const development = {
-    devtool: 'sourse-map',
+    devtool: 'source-map',
     target: 'web',
     output: {
         publicPath: '/',

@@ -8,7 +8,7 @@ if(__DEV__){
     Devtools = require('./redux/redux-devtools/index').default
 }else{
     Devtools = () => (null)
-}
+};
 export const App = () => {
     return (<Provider store={store}>
         <>
@@ -16,4 +16,4 @@ export const App = () => {
             <Devtools />
         </>
     </Provider>)
-}
+};

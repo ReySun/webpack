@@ -7,5 +7,5 @@ const createDevTool= createDevTools(
     <DockMonitor toggleVisibilityKey="ctrl-h" changePositionKey="ctrl-w">
         <LogMonitor />
     </DockMonitor>
-)
-export default createDevTool
+);
+export default createDevTool;

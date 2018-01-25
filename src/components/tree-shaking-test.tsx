@@ -5,11 +5,11 @@ export function Hello(){
             Hello, tsx module!!!!
         </>
     )
-}
+};
 export function Haha(){ // tree-shaking test unused function
     return (
         <>
             Haha????
         </>
     )
-}
+};

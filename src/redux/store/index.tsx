@@ -1,10 +1,11 @@
 import { createStore, compose, applyMiddleware } from 'redux';
 import todoApp from '../reducers/index';
+import { initPreState } from '../../constants/initPreState';
 
 let composed = null;
 if(__DEV__){
     const DevTools = require('../redux-devtools/index').default;
-    const createLogger = require('./createLogger').default
+    const createLogger = require('../redux-devtools/createLogger').default
     composed = compose(
         applyMiddleware(createLogger()),
         DevTools.instrument(),// here choose redux-devtools, only one devtools
@@ -12,19 +13,10 @@ if(__DEV__){
     )
 }else{
     composed = compose()
-}
-const initPreState={ 
-    todos: [
-        {
-            text: 'Use Redux',
-            completed: false,
-            id: 1
-        }
-    ]
-}
+};
 
 export let store = createStore(
     todoApp,
     initPreState,
     composed
-)
+);
