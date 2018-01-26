@@ -6,17 +6,28 @@ class TodoLists extends React.Component<any>{
     todos: [Todo];
     toggleTodo: Function;
     removeTodo: Function;
-    match: any;
     constructor(props){
         super(props);
         this.toggleTodo=props.actions.toggleTodo;
         this.removeTodo=props.actions.removeTodo;
     }
     render(){
-        this.todos=this.props.todos;
-        this.match = this.props.match;
-        console.log(this.match.params);
-        console.log(this.todos.length);
+        switch (this.props.match.params.id) {
+            case 'active':
+                this.todos=this.props.todos.filter((todo)=>(
+                    todo.completed === false
+                ));
+                break;
+            case 'completed':
+                this.todos=this.props.todos.filter((todo)=>(
+                    todo.completed === true
+                ));
+                break;
+            case 'all':
+            default:
+                this.todos=this.props.todos;
+                break;
+        }
         return (this.todos.length === 0 ? null :
             <div className='main'>
                 <input className='toggle-all' type='checkbox'/>

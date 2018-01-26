@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import footer from '../components/Footer';
 import { addTodo } from '../redux/actions/index';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
     return {
         todos: state.todos
     }
