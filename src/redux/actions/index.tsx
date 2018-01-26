@@ -1,26 +1,28 @@
 import { initPreState } from '../../constants/initPreState';
-import { Action } from '../../constants/interface';
+import { Action, Todo, State } from '../../constants/interface';
 import { ADD_TODO, REMOVE_TODO, TOGGLE_TODO, SET_VISIBILITY_FILTER } from '../../constants/ActionType';
+import { store } from '../store/index';
 
 /* action creator */
-let todosLen = initPreState.todos.length || 0;
 export function addTodo(text: string): Action {
+    const todos = store.getState() as State;
+    let todosLen = todos.todos.length || 0;
     return {
         id: todosLen++,
         type: ADD_TODO,
         text
     }
 };
-export function removeTodo(index: number) {
+export function removeTodo(id: number): Action {
     return {
         type: REMOVE_TODO,
-        index
+        id
     };
 };
-export function toggleTodo(index: number): Action {
+export function toggleTodo(id: number): Action {
     return {
         type: TOGGLE_TODO,
-        index
+        id
     }
 };
 export function setVisibilityFilter(filter: string): Action {

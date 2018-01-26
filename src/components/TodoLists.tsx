@@ -17,7 +17,7 @@ class TodoLists extends React.Component<any>{
         this.match = this.props.match;
         console.log(this.match.params);
         console.log(this.todos.length);
-        return (this.todos.length ===0?null:
+        return (this.todos.length === 0 ? null :
             <div className='main'>
                 <input className='toggle-all' type='checkbox'/>
                 <ul className='todo-list'>

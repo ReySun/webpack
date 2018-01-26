@@ -4,20 +4,20 @@ import { VisibilityFilters, SET_VISIBILITY_FILTER, ADD_TODO, TOGGLE_TODO, REMOVE
 
 const { SHOW_ALL } = VisibilityFilters;
 
-function visibilityFilter(state = SHOW_ALL, action: Action): string {
+function visibilityFilter(visibilityFilter: string = SHOW_ALL, action: Action): string {
     switch (action.type) {
         case SET_VISIBILITY_FILTER:
-            return action.filter as string
+            return action.filter
         default:
-            return state
+            return visibilityFilter
     }
 };
 
-function todos(state = [], action: Action){
+function todos(todos: [Todo] = [] as [Todo], action: Action){
     switch (action.type) {
         case ADD_TODO:
             return [
-                ...state,
+                ...todos,
                 {
                     id: action.id,
                     text: action.text,
@@ -25,8 +25,8 @@ function todos(state = [], action: Action){
                 }
             ]
         case TOGGLE_TODO:
-            return state.map((todo: Todo, index) => {
-                if (index === action.index) {
+            return todos.map((todo, index) => {
+                if (index === action.id) {
                     return Object.assign({}, todo, {
                         completed: !todo.completed
                     })
@@ -34,11 +34,11 @@ function todos(state = [], action: Action){
                 return todo
             })
         case REMOVE_TODO:
-            return state.filter((todo: Todo) =>
-                todo.id !== action.index
+            return todos.filter((todo) =>
+                todo.id !== action.id
             )
         default:
-            return state
+            return todos
     }
 };
 

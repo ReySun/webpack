@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Todo } from '../constants/interface';
-
+import { Haha, Hello } from './tree-shaking-test';
 export default class Header extends React.Component<any>{
     addTodo: Function;
     constructor(props){
