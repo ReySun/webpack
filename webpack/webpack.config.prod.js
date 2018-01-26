@@ -9,6 +9,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const BabiliPlugin = require("babili-webpack-plugin");
 const MinifyPlugin = require("babel-minify-webpack-plugin");
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const production = {
     plugins: [
         new CleanWebpackPlugin(paths.appBuild, {
@@ -40,6 +41,7 @@ const production = {
         }),
         new MinifyPlugin(),
         new BabiliPlugin(),
+        new OptimizeCssAssetsPlugin(),
         new webpack.NoEmitOnErrorsPlugin()
     ]
 };
