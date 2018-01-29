@@ -7,7 +7,7 @@ if(__DEV__){
     const DevTools = require('../redux-devtools/index').default;
     const createLogger = require('../redux-devtools/createLogger').default
     composed = compose(
-        // applyMiddleware(createLogger()),
+        applyMiddleware(createLogger()),
         DevTools.instrument(),// here choose redux-devtools, only one devtools
         // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(), // chrome redux extention
     )

@@ -1,7 +1,6 @@
 import { State } from "./interface";
 
 export const initPreState: State={
-    visibilityFilter:"SHOW_ALL",
     todos: [
         {
             id: 0,
