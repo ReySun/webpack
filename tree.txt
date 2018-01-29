@@ -1,0 +1,50 @@
+webpack-typescript-react\src
+|   App.tsx
+|   index.tsx
+|
++---assets
+|   +---css
+|   |       css.css
+|   |
+|   +---less
+|   |       less.less
+|   |
+|   +---sass
+|   |       sass.scss
+|   |
+|   \---todos
+|           todos.css
+|
++---components
+|       Footer.tsx
+|       Header.tsx
+|       ListLink.tsx
+|       TodoLists.tsx
+|       Todos_app.tsx
+|       tree-shaking-test.tsx
+|       UpdateBlocker.tsx
+|
++---constants
+|       ActionType.tsx
+|       initPreState.tsx
+|       interface.tsx
+|
++---containers
+|       Footer.tsx
+|       Header.tsx
+|       TodoLists.tsx
+|
+\---redux
+    +---actions
+    |       index.tsx
+    |
+    +---reducers
+    |       index.tsx
+    |
+    +---redux-devtools
+    |       createLogger.tsx
+    |       index.tsx
+    |
+    \---store
+            index.tsx
+

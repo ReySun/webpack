@@ -2,6 +2,7 @@
 this's a cute&awesome webpack-typescpt-react todos app.
 ### TODO
 - [x] add `React 16.x` + `Redux` + `React-Router4.x`
+- [ ] add `Progressive Web App`
 - [ ] add `React Server Rendering`
 ### plugins
 - [webpack](https://github.com/webpack/webpack)
