@@ -8,10 +8,10 @@ import { Route, Redirect, Switch } from 'react-router-dom';
 const Main = () => (
     <div className='todoapp'>
         <Header />
-        <Switch>
-            <Route path="/:id" component={TodoLists}/>
-            <Redirect from="/" to="all"/>
-        </Switch>
+            <Switch>
+                <Route path="/:id" component={TodoLists}/>
+                <Redirect from="/" to="all"/>
+            </Switch>
         <Footer />
     </div>
 );

@@ -14,12 +14,10 @@
   "author": "ReySun <reysun_sky@outlook.com>",
   "license": "MIT",
   "dependencies": {
-    "history": "^4.7.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
-    "react-router-redux": "^4.0.8",
     "redux": "^3.7.2",
     "todomvc-app-css": "^2.1.0"
   },
@@ -28,7 +26,6 @@
     "@types/react-dom": "^16.0.3",
     "@types/react-redux": "^5.0.14",
     "@types/react-router-dom": "^4.2.3",
-    "@types/react-router-redux": "^5.0.11",
     "@types/redux": "^3.6.31",
     "@types/redux-devtools": "^3.0.42",
     "@types/redux-devtools-dock-monitor": "^1.1.31",

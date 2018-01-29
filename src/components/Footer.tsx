@@ -21,17 +21,17 @@ export default class Footer extends React.Component<any>{
                 <ul className='filters'>
                     <li>
                         <UpdateBlocker>
-                            <NavLink activeClassName="selected" to="/all">All</NavLink>
+                            <NavLink replace activeClassName="selected" to="/all">All</NavLink>
                         </UpdateBlocker>
                     </li>
                     <li>
                         <UpdateBlocker>
-                            <NavLink activeClassName="selected" to="/active">Active</NavLink>
+                            <NavLink replace activeClassName="selected" to="/active">Active</NavLink>
                         </UpdateBlocker>
                     </li>
                     <li>
                         <UpdateBlocker>
-                            <NavLink activeClassName="selected" to="/completed">Completed</NavLink>
+                            <NavLink replace activeClassName="selected" to="/completed">Completed</NavLink>
                         </UpdateBlocker>
                     </li>
                 </ul>

@@ -12,7 +12,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
     entry: {
         main: paths.appIndexJs,
-        vendor: ['react', 'react-dom', 'redux', 'react-redux']
+        vendor: ['react', 'react-dom', 'redux', 'react-redux', 'react-router-dom']
     },
     resolve:{
         extensions: ['.css', '.less', '.scss', '.mjs', '.js', '.json', '.jsx', '.ts', '.tsx']
