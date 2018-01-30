@@ -8,6 +8,8 @@ const loaders = require('./loaders');
 const HtmlwebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -22,6 +24,12 @@ module.exports = {
 		path: paths.appBuild
     },
     plugins: [
+        new CopyWebpackPlugin([
+            { from: paths.appPublic + '/favicon.ico', to: paths.appBuild },
+            // { from: paths.appPublic + '/service-worker.js', to: paths.appBuild }, // self pwa
+            { from: paths.appPublic + '/manifest.json', to: paths.appBuild }
+        ]),
+        new SWPrecacheWebpackPlugin(),
         new HtmlwebpackPlugin({
             title: 'Webpack-demo',
             template: paths.appHtml
