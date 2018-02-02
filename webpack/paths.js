@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const appDirectory = fs.realpathSync(process.cwd());
+const appDirectory = path.resolve(__dirname, './../');
 
 /* create-react-app */
 const resolveApp = relativePath => path.resolve(appDirectory, relativePath);

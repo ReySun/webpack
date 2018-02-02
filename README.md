@@ -2,8 +2,8 @@
 this's a cute&awesome webpack-typescpt-react todos app.
 ### TODO
 - [x] add `React 16.x` + `Redux` + `React-Router4.x`
-- [ ] add `Progressive Web App`
-- [ ] add `React Server Rendering`
+- [x] add `Progressive Web App`
+- [x] add `React Server Rendering`
 ### plugins
 - [webpack](https://github.com/webpack/webpack)
 - [webpack-merge](https://github.com/survivejs/webpack-merge)
@@ -18,4 +18,19 @@ this's a cute&awesome webpack-typescpt-react todos app.
 ### [Development](https://github.com/ReySun/webpack-typescript-react/blob/master/screenshots/dev_ui_1.png)
 ![](./screenshots/dev_1.png)
 ### Production
+``` bash
+npm start
+```
 ![](./screenshots/prod_1.png)
+
+### `Progressive Web App` Production
+``` bash
+npm run build:pwa
+npm run local
+```
+
+### `React Server Rendering` Production
+``` bash
+npm run build:server
+npm run server
+```
